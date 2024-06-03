@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        while(true){
+            var jogo = parseInt(prompt("Esccolha uma opção \n\
+            1 - Continuar Jogando \n\
+            2 - Parar"))
+
+            
+            const dado = [1,2,3,4,5,6];
+            const num = Math.floor(Math.random()*dado.length);
+            console.log(dado[num]);
+
+            if(jogo==1){
+                var j1 = prompt("Jogador 1, escolha par ou ímpar: ");
+                var j2 = prompt("Jogador 2, escolha par ou ímpar: ");
+                if(j1 == "par"){
+                if(j2 == "par"){
+                    alert("Jogador 2 escolha outra opção! ")
+                }
+                else if(j2=="impar"){
+                    if(dado[num]%2==0){
+                        alert("O jogador 1 venceu!")
+                    }
+                    else {
+                        alert("O jogador 2 venceu!")
+                    }
+                }
+            }
+            else if(j1 =="impar"){
+                if(j2 == "par"){
+                    if(dado[num]%2==0){
+                        alert("O jogador 2 venceu!")
+                    }
+                    else {
+                        alert("O jogador 1 venceu!")
+                    }
+                }
+                else if(j2 =="impar"){
+                    alert("Jogador 2 escolha outra opção! ")
+                }
+            }
+            else{
+                alert("Jogador 1, escolha outra opção!")
+            }
+            }
+            else if(jogo == 2){
+                break
+            }
+            else{
+                alert("Opção inválida")
+            }
+        }
+    </script>
+</body>
+</html>
